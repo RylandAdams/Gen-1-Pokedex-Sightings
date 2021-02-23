@@ -20,6 +20,7 @@ function SightingList(props){
           name = { sighting.name }
           region = { sighting.region }
           details = { sighting.details }
+          formattedWaitTime = {sighting.formattedWaitTime}
           id = { sighting.id }
           key = { sighting.id }/>
         })}

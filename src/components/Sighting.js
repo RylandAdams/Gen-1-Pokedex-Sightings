@@ -7,6 +7,7 @@ function Sighting(props){
       <div onClick = {() => props.whenSightingClicked(props.id)}>
         <h3>{props.name} {props.region}</h3>
         <p>{props.details}</p>
+        <p>{props.formattedWaitTime}</p>
       </div>
       <hr />
     </>
@@ -18,6 +19,7 @@ Sighting.propTypes = {
   region: PropTypes.string,
   details: PropTypes.string,
   id: PropTypes.string,
+  formattedWaitTime: PropTypes.string,
   whenSightingClicked: PropTypes.func
 };
 

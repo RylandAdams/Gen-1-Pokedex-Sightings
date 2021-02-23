@@ -2,6 +2,11 @@ import React from 'react';
 import EditSightingForm from './EditSightingForm';
 import Sighting from './Sighting';
 import SightingList from './SightingList';
+import { connect } from 'react-redux';
+import CreateSighting from './CreateSighting';
+import PropTypes from 'prop-types';
+import * as a from './../actions';
+import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class SightingControl extends React.Component {
   constructor(props) {
@@ -85,21 +90,14 @@ class SightingControl extends React.Component {
     if (this.state.editing) {
       currentlyVisibleState = <EditSightingForm sighting = {this.state.selectedSighting} onEditSighting = {this.handleEditingSightingInList} />
       buttonText = "Return to Sighting List";
-    } else if (this.state.selectedSighting != null) {
-      currentlyVisibleState = 
-      <SightingDetail
-        sighting = {this.state.selectedSighting}
-        onClickingDelete = {this.handleDeletingSighting}
-        onClickingEdit = {this.handleEditClick} />
-      buttonText = "Return to Sighting List";
     } else if (this.props.formVisibleOnPage) {
-      currentlyVisibleState = <NewSightingForm onNewSightingCreation = {this.handleAddingNewSightingToList} />;
+      currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
       buttonText = "Return to Ticket List";
     } else if (this.props.formVisibleOnPage) {
-      currentlyVisibleState = <NewSightingForm onNewSightingCreation = {this.handleAddingNewSightingToList} />;
+      currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
       buttonText =  "Return to Sighting List";
     } else {
-      currentlyVisibleState = <NewSightingForm onNewSightingCreation = {this.handleAddingNewSightingToList} />;
+      currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
       buttonText = "Add Sighting"
     }
     return (
@@ -112,7 +110,7 @@ class SightingControl extends React.Component {
 }
 
 SightingControl.propTypes = {
-  masterSightingList: PropTypes.Object
+  masterSightingList: PropTypes.object
 };
 
 const mapStateToProps = state => {

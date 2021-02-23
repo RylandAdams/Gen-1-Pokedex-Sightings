@@ -1,0 +1,3 @@
+export const DELETE_SIGHTING = 'DELETE_SIGHTING';
+export const TOGGLE_FORM = 'TOGGLE_FORM';
+export const UPDATE_TIME = 'UPDATE_TIME';
