@@ -1,7 +1,7 @@
 import React from 'react';
 import PokeList from './PokeList';
 
-class PokeControl extend React.Component {
+class PokeControl extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,11 @@ class PokeControl extend React.Component {
   }
 
   render(){
-    
+
+    return (
+      <>
+      </>
+    );
   }
 }
 

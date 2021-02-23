@@ -1,3 +1,10 @@
 import React from 'react';
 
-export default PokeDetails;
+function PokeDetail(props){
+  return (
+    <>
+    </>
+  );
+}
+
+export default PokeDetail;
