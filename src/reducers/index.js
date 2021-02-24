@@ -5,7 +5,7 @@ import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
-  masterSightinList: sightingListReducer,
+  masterSightingList: sightingListReducer,
   firestore: firestoreReducer
 });
 

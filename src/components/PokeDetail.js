@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-function PokeDetail(props){
-  return (
-    <>
-    </>
-  );
-}
+// function PokeDetail(props){
+//   return (
+//     <>
+//     </>
+//   );
+// }
 
-export default PokeDetail;
+// export default PokeDetail;

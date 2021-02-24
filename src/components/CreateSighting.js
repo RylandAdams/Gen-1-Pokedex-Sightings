@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 import { useFirestore } from 'react-redux-firebase';
+// import Moment from 'moment';
 
 function CreateSighting(props){
 
@@ -15,7 +16,7 @@ function CreateSighting(props){
       name: event.target.name.value,
       region: event.target.region.value,
       details: event.target.details.value,
-      timeAdded: firestore.FieldValue.serverTimestamp()
+      timeOpen: firestore.FieldValue.serverTimestamp()
     });
   }
 

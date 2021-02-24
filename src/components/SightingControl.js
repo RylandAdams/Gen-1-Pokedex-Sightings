@@ -80,7 +80,7 @@ class SightingControl extends React.Component {
   }
 
   handleDeletingSighting = (id) => {
-    this.props.firestore.delete({collection: 'tickets', doc: id});
+    this.props.firestore.delete({collection: 'sightings', doc: id});
     this.setState({selectedSighting: null});
   }
 
@@ -90,14 +90,14 @@ class SightingControl extends React.Component {
     if (this.state.editing) {
       currentlyVisibleState = <EditSightingForm sighting = {this.state.selectedSighting} onEditSighting = {this.handleEditingSightingInList} />
       buttonText = "Return to Sighting List";
-    } else if (this.props.formVisibleOnPage) {
-      currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
-      buttonText = "Return to Ticket List";
+    } else if (this.state.selectedSighting != null) {
+      currentlyVisibleState = <CreateSighting sighting = {this.state.selectedSighting} onClickingDelete = {this.handleDeletingSighting} onClickingEdit = {this.handleEditClick} />;
+      buttonText = "Return to Sighting List";
     } else if (this.props.formVisibleOnPage) {
       currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
       buttonText =  "Return to Sighting List";
     } else {
-      currentlyVisibleState = <CreateSighting onNewSightingCreation = {this.handleAddingNewSightingToList} />;
+      currentlyVisibleState = <SightingList SightingList = {this.props.masterSightingList} onSightingSelection = {this.handleChangingSelectedSighting} />;
       buttonText = "Add Sighting"
     }
     return (
