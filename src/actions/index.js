@@ -9,6 +9,10 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
+export const togglePokeForm = () => ({
+  type: c.TOGGLEPOKE_FORM
+});
+
 export const updateTime = (id, formattedWaitTime) => ({
   type: c.UPDATE_TIME,
   id: id,

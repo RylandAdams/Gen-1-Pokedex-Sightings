@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import SightingControl from './SightingControl'
-// import PokeControl from './PokeControl'
+import PokeControl from './PokeControl'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
         <Route path='/sightings'>
           <SightingControl />
         </Route>
-        {/* <Route path='/'>
+        <Route path='/'>
           <PokeControl />
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );
