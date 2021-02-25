@@ -3,14 +3,19 @@ import PropTypes from 'prop-types';
 import Poke from './Poke';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { useFirestore } from 'react-redux-firebase';
+
 
 function PokeList(props){
+  const firestore = useFirestore();
   useFirestoreConnect([
     { collection: 'pokemon' }
   ]);
 
-  const pokemon = useSelector(state => state.firestore.ordered.pokemon);
+  // firestore = firestore.collection.orderByChild('number');
 
+  const pokemon = useSelector(state => state.firestore.ordered.pokemon);
+  
 
   if (isLoaded(pokemon)) {
     return(
