@@ -11,12 +11,13 @@ function PokeList(props){
 
   const pokemon = useSelector(state => state.firestore.ordered.pokemon);
 
+
   if (isLoaded(pokemon)) {
     return(
       <>
         <hr/>
         {pokemon.map((poke) => {
-          return <Poke
+          return <Poke 
           whenPokeClicked = { props.onPokeSelection }
           number = { poke.number }
           img = { poke.img }

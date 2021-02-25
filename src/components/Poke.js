@@ -6,7 +6,7 @@ function Poke(props){
     <>
       <div className='card'>
         <div onClick = {() => props.whenPokeClicked(props.id)}>
-          <h3>{props.name}</h3>
+          <h3>{props.number}: {props.name}</h3>
         </div>
       </div>
       <hr />
