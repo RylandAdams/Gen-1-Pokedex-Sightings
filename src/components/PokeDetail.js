@@ -29,7 +29,7 @@ function PokeDetail(props){
         <div className='card'>
           <div className='card-header'><strong>{poke.number}:{poke.name}</strong></div>
           <div className='card-header'>
-            <a href='{poke.img}' alt='Photo of {poke.name}'></a>
+            <img src={poke.img}></img>
           </div>
             <div className='card-body'>
               <p>Description: {poke.description}</p>

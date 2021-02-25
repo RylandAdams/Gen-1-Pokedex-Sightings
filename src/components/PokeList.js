@@ -17,7 +17,7 @@ function PokeList(props){
         <hr/>
         {pokemon.map((poke) => {
           return <Poke
-          whenPokeClicked = { props.onPokemonSelection }
+          whenPokeClicked = { props.onPokeSelection }
           number = { poke.number }
           img = { poke.img }
           name = { poke.name }
@@ -39,7 +39,7 @@ function PokeList(props){
 }
 
 PokeList.propTypes = {
-  onPokemonSelection: PropTypes.func
+  onPokeSelection: PropTypes.func
 };
 
 export default PokeList;

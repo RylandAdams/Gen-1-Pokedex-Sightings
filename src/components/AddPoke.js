@@ -12,25 +12,28 @@ function AddPoke(props){
     event.preventDefault();
     props.onNewPokeCreation();
 
-    let typesString = (event.target.types.value) 
+    let typesString = (event.target.types.value);
     
     let typesArray = (typesString) => {
       return typesArray = typesString.split(' ');
     }
 
-    let weaknessesString = (event.target.weaknesses.value) 
+    const typeResult = typesArray(typesString);
+
+    let weaknessesString = (event.target.weaknesses.value); 
     
     let weaknessesArray = (weaknessesString) => {
       return weaknessesArray = weaknessesString.split(' ');
     }
+    const weaknessResult = weaknessesArray(weaknessesString);
 
     return firestore.collection('pokemon').add({
       number: event.target.number.value,
       img: event.target.img.value,
       name: event.target.name.value,
       description: event.target.description.value,
-      types: typesArray,
-      weaknesses: weaknessesArray
+      types: typeResult,
+      weaknesses: weaknessResult
     });
   }
 

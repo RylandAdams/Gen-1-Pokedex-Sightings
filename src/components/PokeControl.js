@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import * as a from './../actions';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
+import ReusablePokeForm from './ReusablePokeForm';
 
 class PokeControl extends React.Component {
 
@@ -101,10 +102,11 @@ class PokeControl extends React.Component {
           <div className='row'>
             <div className='col-md-6'>
               {/* {currentlyVisibleState} */}
-              <PokeDetail />
+              <PokeDetail poke = {this.state.selectedPoke} onClickingDelete = {this.handleDeletingPoke} onClickingEdit = {this.handleEditClick} />
             </div>
             <div className='col-md-6'>
-              <PokeList />
+              <AddPoke onNewPokeCreation = {this.handleAddingNewPokeToList} />
+              <PokeList PokeList = {this.props.masterPokeList} onPokeSelection = {this.handleChangingSelectedPoke} />
             </div>
           </div>
         </div>
