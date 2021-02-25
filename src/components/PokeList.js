@@ -14,7 +14,7 @@ function PokeList(props){
   if (isLoaded(pokemon)) {
     return(
       <>
-        <hr/>
+        <hr />
         {pokemon.map((poke) => {
           return <Poke
           whenPokeClicked = { props.onPokeSelection }

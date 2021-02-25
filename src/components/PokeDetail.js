@@ -10,7 +10,7 @@ function PokeDetail(props){
       <>
         <div className='card'>
           <div className='card-header'><strong>#???: UnKnown</strong></div>
-          <div className='card-header'>
+          <div className='card-header' id='imgField'>
             <a href='' alt='Photo of unknown'></a>
           </div>
             <div className='card-body'>
@@ -33,9 +33,9 @@ function PokeDetail(props){
           </div>
             <div className='card-body'>
               <p>Description: {poke.description}</p>
-              <br/>
+              <hr/>
               <p>Type: {poke.types}</p>
-              <br/>
+              <hr/>
               <p>Weaknesses: {poke.weaknesses}</p>
             </div>
         </div>

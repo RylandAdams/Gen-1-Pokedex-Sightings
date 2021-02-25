@@ -100,11 +100,11 @@ class PokeControl extends React.Component {
       <>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-6'>
+            <div className='col-md-6' id='display'>
               {/* {currentlyVisibleState} */}
               <PokeDetail poke = {this.state.selectedPoke} onClickingDelete = {this.handleDeletingPoke} onClickingEdit = {this.handleEditClick} />
             </div>
-            <div className='col-md-6'>
+            <div className='col-md-6' id='list'>
               <AddPoke onNewPokeCreation = {this.handleAddingNewPokeToList} />
               <PokeList PokeList = {this.props.masterPokeList} onPokeSelection = {this.handleChangingSelectedPoke} />
             </div>

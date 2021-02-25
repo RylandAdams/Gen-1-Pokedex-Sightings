@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.containerNav {
+  height: 110px;
+  text-align: center;
+  background-color: rgb(80, 255, 0);
+  margin-bottom: 25px;
+  padding-top: 15px;
+}
+
+.headerNav {
+  -webkit-text-fill-color: rgb(245,200,5);
+  -webkit-text-stroke: rgb(50,80,150) 2px;
+}
+
+.linksNav {
+  width: 100%;
+  background-color: red;
+  padding: 5px;
+  border: rgb(206, 2, 2) solid 2px;
+}
+
+.navButton {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  margin: 10px;
+  background-color: rgb(245,200,5);
+  border: rgb(160, 160, 0) solid 2px;
+  border-radius: 15%;
+}
+
+#root {
+  background-color:  rgb(80, 255, 0);
+}
+
+#list,
+#display {
+  margin-top: 10px;
+  padding-top: 20px;
+  border: black solid 2px;
+  background-color: rgb(206, 2, 2);
+}
+
+#display {
+  border-radius: 5% 0 0 5%;
+}
+
+#list {
+  border-radius: 0 5% 5% 0;
+}
+
+#listItem {
+  background-color: blue;
+  color: white;
+  align-items: center;
+}
+
+#imgField {
+background-color: gray;
+}
+
+.card-body {
+  background-color: rgb(218, 214, 214);
+}
+

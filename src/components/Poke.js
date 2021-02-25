@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Poke(props){
   return (
     <>
-      <div className='card'>
+      <div id='listItem' className='card'>
         <div onClick = {() => props.whenPokeClicked(props.id)}>
           <h3>{props.name}</h3>
         </div>
