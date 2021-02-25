@@ -13,20 +13,19 @@ function AddPoke(props){
     props.onNewPokeCreation();
 
     let typesString = (event.target.types.value);
+    let typesArray = typesString.split(' ');
     
-    let typesArray = (typesString) => {
-      return typesArray = typesString.split(' ');
-    }
-
-    const typeResult = typesArray(typesString);
+    const typeResult = typesArray.map(e => {
+      return e += ", "
+    })
 
     let weaknessesString = (event.target.weaknesses.value); 
+    let weaknessesArray = weaknessesString.split(' ');
     
-    let weaknessesArray = (weaknessesString) => {
-      return weaknessesArray = weaknessesString.split(' ');
-    }
-    const weaknessResult = weaknessesArray(weaknessesString);
-
+    let weaknessResult = weaknessesArray.map(e => {
+        return e += ", "
+    }) 
+    
     return firestore.collection('pokemon').add({
       number: event.target.number.value,
       img: event.target.img.value,
