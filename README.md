@@ -3,7 +3,7 @@
 <p align="center">
     <br>
     <a href="https://github.com/Pugsly99">
-        <img style="border-radius: 100%; height: 250px; width: auto" src="https://avatars.githubusercontent.com/u/72629902?s=460&u=3d57cdd64df52a007e362b2cb3e02573cdaa9c3a&v=4" width="150px" height="auto">
+        <img style="border-radius: 100%; height: 250px; width: auto" src="https://avatars.githubusercontent.com/u/72629902?s=460&u=3d57cdd64df52a007e362b2cb3e02573cdaa9c3a&v=4">
     </a>
     <a href="https://github.com/SJerrod">
         <img style="border-radius: 100%; height: 250px; width: auto" src="https://avatars1.githubusercontent.com/u/65928050?s=460&u=eae77ab164dde31ddbe95627ad67c5d7072ca033&v=4">
